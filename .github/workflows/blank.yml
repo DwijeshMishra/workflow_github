@@ -1,0 +1,15 @@
+name: Push File(or Dir) to another repository
+
+on: push
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Push to another repo
+      run: | 
+          chmod +x bash.sh
+          sudo ./bash.sh
